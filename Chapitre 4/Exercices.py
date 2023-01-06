@@ -191,6 +191,3 @@ def ex16(n):
             print("\u001b[30m", end='')
             print(' ', end='')
         print()
-    
-
-ex16(5)
