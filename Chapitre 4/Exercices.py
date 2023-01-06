@@ -137,7 +137,6 @@ def ex14c():
         nbe_notes+=1
     
     return moy
-    
 
 def ex15():
     from random import randint
@@ -194,4 +193,4 @@ def ex16(n):
         print()
     
 
-ex16(50)
+ex16(5)
