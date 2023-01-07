@@ -1,14 +1,16 @@
 def ex1() -> str:
     return "5x1000 + 6x100 + 2x10 + 4x1\n5x10³ + 6x10² + 2x10¹ + 4x10⁰"
 
-def ex2(nbe: str) -> int:
-    n = str(nbe%2)
-    while nbe//2 >= 1:
-        nbe = nbe//2
-        n = str(nbe%2)+n
-    return int(n)
+def decimal_to_binaire(nbe: int) -> int:
+    assert type(nbe) == int and nbe>=0, "Le nombre doit être un entier supérieur à 0"
 
-def ex3() -> str:
-    return ex2(197), ex2(119), ex2(243)
+    p = q = 0
+    while nbe>0:
+        p+=(nbe%2)*10**q
+        q+=1
+        nbe//=2
+    
+    return p
 
-print(ex3())
+nbe = 58
+print(decimal_to_binaire(nbe))
