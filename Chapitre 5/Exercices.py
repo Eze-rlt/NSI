@@ -9,7 +9,4 @@ def base(nbe: int, base_src: int = 10, base_dest: int = 2) -> int:
         new_nbe+=(nbe%base_dest)*base_src**nbe_loop
         nbe_loop+=1
         nbe//=base_dest
-    
     return new_nbe
-
-print(base(1023))
