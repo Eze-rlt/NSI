@@ -12,4 +12,4 @@ def base(nbe: int, base_src: int = 10, base_dest: int = 2) -> int:
     
     return new_nbe
 
-print(base(255))
+print(base(1023))
