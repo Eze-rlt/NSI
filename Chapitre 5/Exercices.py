@@ -20,5 +20,5 @@ def base2(nbe: str(), base_src=16, base_dest=10):
         new_nbe+=nbe*base_src**nbe_loop
         nbe_loop+=1
     if base_dest < 10:
-        new_nbe = base(new_nbe, 10, base_dest)
+        new_nbe = base_changer(new_nbe, 10, base_dest)
     return new_nbe
