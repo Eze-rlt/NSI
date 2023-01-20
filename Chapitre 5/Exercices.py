@@ -22,6 +22,3 @@ def base2(nbe: str(), base_src=16, base_dest=10):
     if base_dest < 10:
         new_nbe = base(new_nbe, 10, base_dest)
     return new_nbe
-
-print(base2('4F3B', 16, 2))
-print(base2('100111100111011', 2, 16))
