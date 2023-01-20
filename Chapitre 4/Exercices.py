@@ -149,11 +149,9 @@ def ex15():
         lst = list()
         while somme(lst) < 20000:
             lst.append(randint(10, 500))
-        
         return lst
     def moyenne(lst):
         return somme(lst)/len(lst)
-    
     return moyenne(remplir_sac())
 
 def ex16(n):
@@ -191,3 +189,5 @@ def ex16(n):
             print("\u001b[30m", end='')
             print(' ', end='')
         print()
+
+print(ex15())
