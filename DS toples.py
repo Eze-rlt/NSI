@@ -32,3 +32,11 @@ def trouver(lst:list, val:int)->list:
         if lst[x]==val:
             places.append(x)
     return places
+
+L = [1, 2, 3, [4]]
+M = [0, 0, 0, 0]
+
+for i in range(len(L)):
+    M[i] = L[i]
+    M[1] = 10
+print(L)
