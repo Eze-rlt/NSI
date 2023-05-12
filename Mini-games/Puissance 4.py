@@ -82,8 +82,8 @@ def play(joueur:int) -> int:
     clear()
     print_grille()
     coup = int(input(f'Joueur {joueur}, à toi !! '))
-    while grille[coup-1][0] != None or not (1<=coup<=7):
-        coup = int(input('La columne est déjà pleine, réessaie !! '))
+    while not (1<=coup<=7) or (grille[coup-1][0] != None):
+        coup = int(input('Coup invalide, réessaie !! '))
     place_jeton(coup, joueur)
 
 def manual_play():
@@ -96,15 +96,15 @@ def manual_play():
         play(2)
         end=check_fini()
 
-        if not None in [grille[x][0] for x in range(grille)]:
+        if not None in [grille[x][0] for x in range(len(grille))]:
             end=True
 
-
+    clear()
     print_grille()
     if end!=True:
-        print('Le joueur', end, 'a gagné !!')
+        input(f'Le joueur {end} a gagné !!')
     else:
-        print('Ex-Eaco !!!')
+        input('Ex-Eaco !!!')
 
 def debug_mode_player(coups1:list, coups2:list=[]):
     clear()
@@ -115,7 +115,6 @@ def debug_mode_player(coups1:list, coups2:list=[]):
     print_grille()
     print('Le joueur', check_fini(), 'a gagné !! (DEBUG MODE)')
     
-exit()
 def autoplay():
     def auto_play(joueur:int) -> int:
         print_grille()
@@ -146,8 +145,8 @@ def autoplay():
         for a in grille:
             print(a)
 
-autoplay()
-while not input('CONTINUE ? ').lower() == 'n':
+manual_play()
+while not input('CONTINUE ? [n to stop]').lower() == 'n':
     reset_grille()
-    autoplay()
+    manual_play()
 
